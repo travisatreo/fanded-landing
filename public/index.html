@@ -30,13 +30,14 @@ body{font-family:var(--font-b);background:var(--bg);color:var(--text);-webkit-fo
 
 /* Warm ambient glow — moves with scroll */
 .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.ambient .orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.7;transition:transform 0.1s ease-out;will-change:transform}
-.orb-1{width:800px;height:800px;top:-15%;right:-10%;background:radial-gradient(circle,rgba(74,74,230,0.14) 0%,transparent 65%)}
-.orb-2{width:600px;height:600px;bottom:5%;left:-10%;background:radial-gradient(circle,rgba(123,92,246,0.10) 0%,transparent 65%)}
+.ambient .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.85;transition:transform 0.1s ease-out;will-change:transform}
+.orb-1{width:900px;height:900px;top:-15%;right:-10%;background:radial-gradient(circle,rgba(74,74,230,0.18) 0%,transparent 60%)}
+.orb-2{width:700px;height:700px;bottom:5%;left:-10%;background:radial-gradient(circle,rgba(123,92,246,0.14) 0%,transparent 60%)}
 /* Warm sunset orbs — the magic */
-.orb-3{width:900px;height:500px;top:25%;left:10%;background:radial-gradient(ellipse,rgba(232,140,60,0.10) 0%,transparent 65%)}
-.orb-4{width:700px;height:400px;top:55%;right:5%;background:radial-gradient(ellipse,rgba(200,100,60,0.08) 0%,transparent 65%)}
-.orb-5{width:500px;height:500px;bottom:10%;left:30%;background:radial-gradient(circle,rgba(232,197,71,0.07) 0%,transparent 65%)}
+.orb-3{width:1100px;height:600px;top:20%;left:5%;background:radial-gradient(ellipse,rgba(232,120,50,0.18) 0%,rgba(200,80,40,0.06) 40%,transparent 65%)}
+.orb-4{width:900px;height:500px;top:50%;right:0%;background:radial-gradient(ellipse,rgba(210,90,50,0.15) 0%,rgba(180,70,40,0.05) 40%,transparent 65%)}
+.orb-5{width:700px;height:700px;bottom:5%;left:25%;background:radial-gradient(circle,rgba(232,197,71,0.12) 0%,rgba(220,160,50,0.04) 40%,transparent 65%)}
+.orb-6{width:1200px;height:400px;top:40%;left:-5%;background:radial-gradient(ellipse,rgba(180,80,40,0.10) 0%,transparent 60%)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .c{max-width:1100px;margin:0 auto;padding:0 24px}
@@ -161,6 +162,7 @@ footer{border-top:1px solid var(--border);padding:40px 0}
   <div class="orb orb-3"></div>
   <div class="orb orb-4"></div>
   <div class="orb orb-5"></div>
+  <div class="orb orb-6"></div>
 </div>
 
 <!-- NAV -->
@@ -378,8 +380,8 @@ footer{border-top:1px solid var(--border);padding:40px 0}
 
   // Ambient orb parallax — orbs drift as you scroll
   var orbs = document.querySelectorAll('.orb');
-  var speeds = [0.03, -0.025, 0.04, -0.035, 0.02];
-  var xDrifts = [10, -15, 20, -12, 8];
+  var speeds = [0.03, -0.025, 0.04, -0.035, 0.02, 0.015];
+  var xDrifts = [10, -15, 20, -12, 8, -18];
   var lastScroll = 0;
   var ticking = false;
 
