@@ -131,6 +131,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 24px;display:fle
 .inv-card h4{font-size:14px;font-weight:600;margin-bottom:6px}
 .inv-card p{font-size:13px;color:var(--text-dim);line-height:1.4}
 
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden;margin-top:40px}
+@media(min-width:640px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+.blog-card{background:var(--bg-card);padding:32px 28px;text-decoration:none;color:var(--text);transition:background 0.25s;display:block}
+.blog-card:hover{background:#181838}
+.blog-pill{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary-light);background:var(--primary-glow);padding:4px 10px;border-radius:var(--r-full);display:inline-block;margin-bottom:12px}
+.blog-card h3{font-family:var(--font-d);font-size:22px;font-weight:400;line-height:1.25;margin-bottom:8px}
+.blog-card p{font-size:14px;color:var(--text-muted);line-height:1.55}
+.blog-more{display:inline-block;margin-top:32px;font-size:14px;font-weight:500;color:var(--primary);text-decoration:none;transition:color 0.15s}
+.blog-more:hover{color:var(--primary-light)}
+
 /* CTA */
 .cta-section{text-align:center;padding:80px 0}
 @media(min-width:768px){.cta-section{padding:100px 0}}
@@ -175,6 +186,7 @@ footer{border-top:1px solid var(--border);padding:40px 0}
     <a href="#creators">For Creators</a>
     <a href="#fans">For Fans</a>
     <a href="#investors">For Investors</a>
+    <a href="#blog">Blog</a>
     <a href="https://app.fanded.com/login" class="nav-cta">Sign In</a>
   </div>
 </nav>
@@ -183,7 +195,7 @@ footer{border-top:1px solid var(--border);padding:40px 0}
 <section class="hero">
   <div class="c">
     <div class="hero-badge">The future of fan clubs</div>
-    <h1>Where fans become <em>family</em></h1>
+    <h1>Where fans <em>belong</em></h1>
     <p>The membership platform where your biggest fans become your strongest revenue stream. No algorithms. No middlemen. Just community.</p>
     <div class="hero-ctas">
       <a href="https://app.fanded.com" class="btn btn-p">Start Your Fan Club</a>
@@ -326,6 +338,31 @@ footer{border-top:1px solid var(--border);padding:40px 0}
         <p>Direct fan revenue has 5x the margin of ad-supported streaming. No middleman cuts.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section" id="blog">
+  <div class="c">
+    <div class="section-line"></div>
+    <div class="reveal">
+      <div class="section-tag">The Talent's Perspective</div>
+      <h2>Essays on why talent deserves <em>information parity</em></h2>
+      <p class="section-intro">The entertainment industry runs on information asymmetry. We're writing the playbook for what happens when that changes.</p>
+    </div>
+    <div class="blog-grid reveal">
+      <a class="blog-card" href="https://fanded-journal.vercel.app/blog/information-parity.html">
+        <span class="blog-pill">Philosophy</span>
+        <h3>Information Parity</h3>
+        <p>Why the most talented people in the world have always been the least informed people in the room.</p>
+      </a>
+      <a class="blog-card" href="https://fanded-journal.vercel.app/blog/">
+        <span class="blog-pill">Coming Soon</span>
+        <h3>The Artist Already Paid the CAC</h3>
+        <p>Talent built audiences at zero marginal cost, then handed them to platforms who understood exactly what they were worth.</p>
+      </a>
+    </div>
+    <a href="https://fanded-journal.vercel.app/blog/" class="blog-more reveal">Read all essays &rarr;</a>
   </div>
 </section>
 
